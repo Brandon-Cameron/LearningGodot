@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpp0xguykdcjx"]
+
+[ext_resource type="PackedScene" uid="uid://cc3ehlc1h3tjj" path="res://SceneTesting/player.tscn" id="1_8tl8a"]
+[ext_resource type="Texture2D" uid="uid://ddkfiupdbu40f" path="res://Coin.png" id="2_r2u3l"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8tl8a")]
+
+[node name="Player2" parent="." instance=ExtResource("1_8tl8a")]
+position = Vector2(91, 64)
+
+[node name="Player3" parent="." instance=ExtResource("1_8tl8a")]
+position = Vector2(-134, 136)
+
+[node name="Player4" parent="." instance=ExtResource("1_8tl8a")]
+position = Vector2(9, 200)
+
+[node name="Player5" parent="." instance=ExtResource("1_8tl8a")]
+position = Vector2(-248, 4)
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(-395, 164)
+scale = Vector2(0.5, 0.558824)
+texture = ExtResource("2_r2u3l")
+
+[node name="Coin2" type="Sprite2D" parent="."]
+position = Vector2(-374, 164)
+scale = Vector2(0.533333, 0.529412)
+texture = ExtResource("2_r2u3l")
+
+[node name="Coin3" type="Sprite2D" parent="."]
+position = Vector2(-434, 164)
+rotation = -0.78896
+texture = ExtResource("2_r2u3l")
+
+[node name="Coin4" type="Sprite2D" parent="."]
+position = Vector2(-328, 162)
+rotation = 0.78675
+texture = ExtResource("2_r2u3l")
+
+[node name="Coin5" type="Sprite2D" parent="."]
+position = Vector2(-384, 184)
+texture = ExtResource("2_r2u3l")
+
+[node name="Coin6" type="Sprite2D" parent="."]
+position = Vector2(-383, 143)
+texture = ExtResource("2_r2u3l")
