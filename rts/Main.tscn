@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://c770udvrp03bf"]
 
 [ext_resource type="Texture2D" uid="uid://bl14n3c0eqkr2" path="res://Sprites/tilemap.png" id="1_gnl7w"]
-[ext_resource type="PackedScene" uid="uid://c75y5g5i76fcj" path="res://Sprites/unit.tscn" id="2_l2pn8"]
-[ext_resource type="Script" path="res://Sprites/unit.gd" id="3_wlt2j"]
+[ext_resource type="PackedScene" uid="uid://ekw6on1ftr4v" path="res://playerUnit.tscn" id="2_k584h"]
+[ext_resource type="PackedScene" uid="uid://c5uahyc54sj53" path="res://enemyUnit.tscn" id="3_0w1f5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_expql"]
 texture = ExtResource("1_gnl7w")
@@ -283,10 +283,10 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_ry4gd")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_y0yt7"]
-vertices = PackedVector2Array(162, 208, 226, 202, 425, 200.844, 465, 202.172, 472, 208, 441, 161, 441, 177, 425, 177, 369, 169, 369, 144, 447, 72, 447, 53, 472, 26, 465, 161, 338, 154, 338, 96, 345, 144, 345, 169, 289, 105, 289, 80, 296, 96, 296, 154, 168, 202, 162, 26, 168, 160, 289, 169, 289, 144, 265, 105, 369, 105, 434, 74, 226, 176, 265, 169, 345, 105, 345, 80, 265, 144, 194, 176, 194, 160, 434, 53, 434, 48, 408, 48, 408, 53, 395, 53, 395, 72, 408, 72, 408, 74, 369, 80, 434, 72, 265, 80)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(14, 15, 16, 17), PackedInt32Array(18, 19, 20, 21), PackedInt32Array(22, 1, 0), PackedInt32Array(22, 0, 23, 24), PackedInt32Array(12, 4, 3, 13), PackedInt32Array(14, 17, 25, 21), PackedInt32Array(21, 25, 26), PackedInt32Array(18, 21, 26, 27), PackedInt32Array(28, 29, 10, 13, 5, 9), PackedInt32Array(8, 7, 2, 1, 30, 17), PackedInt32Array(25, 17, 30), PackedInt32Array(31, 25, 30), PackedInt32Array(28, 9, 16, 32), PackedInt32Array(32, 16, 15), PackedInt32Array(33, 32, 15), PackedInt32Array(27, 26, 34), PackedInt32Array(34, 30, 35, 36, 27), PackedInt32Array(11, 37, 38, 12), PackedInt32Array(39, 40, 41, 23), PackedInt32Array(42, 43, 44, 28, 45), PackedInt32Array(29, 46, 10), PackedInt32Array(44, 29, 28), PackedInt32Array(36, 24, 23, 47, 27), PackedInt32Array(34, 31, 30), PackedInt32Array(23, 41, 42, 45, 33), PackedInt32Array(23, 12, 38, 39), PackedInt32Array(23, 33, 15, 19), PackedInt32Array(15, 20, 19), PackedInt32Array(23, 19, 47)])
+vertices = PackedVector2Array(438, 158, 438, 174, 422, 174, 372, 172, 372, 141, 422, 203.742, 459.883, 205, 229, 205, 342, 141, 342, 172, 341, 157, 341, 93, 292, 108, 292, 77, 293, 93, 293, 157, 450, 75, 450, 50, 469, 29, 468, 158, 292, 172, 292, 141, 229, 173, 262, 172, 469, 205, 468, 205, 372, 108, 437, 77, 342, 108, 342, 77, 262, 108, 262, 141, 197, 173, 197, 157, 165, 157, 165, 29, 437, 50, 437, 45, 405, 45, 405, 50, 392, 50, 372, 77, 392, 75, 405, 75, 405, 77, 437, 75, 262, 77)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(10, 9, 20, 15), PackedInt32Array(15, 20, 21), PackedInt32Array(12, 15, 21), PackedInt32Array(3, 2, 5, 7, 22, 9), PackedInt32Array(20, 9, 22), PackedInt32Array(23, 20, 22), PackedInt32Array(18, 24, 25, 19), PackedInt32Array(16, 19, 0, 4, 26, 27), PackedInt32Array(26, 4, 8, 28), PackedInt32Array(28, 8, 11), PackedInt32Array(29, 28, 11), PackedInt32Array(30, 12, 21, 31), PackedInt32Array(22, 32, 33, 31, 23), PackedInt32Array(31, 33, 34, 35, 30), PackedInt32Array(17, 36, 37, 18), PackedInt32Array(38, 39, 40), PackedInt32Array(41, 42, 43, 44, 26), PackedInt32Array(27, 45, 16), PackedInt32Array(44, 27, 26), PackedInt32Array(29, 11, 14, 13), PackedInt32Array(40, 42, 41, 29), PackedInt32Array(46, 30, 35), PackedInt32Array(46, 35, 18, 38), PackedInt32Array(40, 29, 13), PackedInt32Array(18, 37, 38), PackedInt32Array(46, 38, 40, 13)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(157, 21, 477, 21, 477, 213, 157, 213)])
-agent_radius = 5.0
+agent_radius = 8.0
 
 [node name="Main" type="Node2D"]
 
@@ -356,5 +356,8 @@ polygon = PackedVector2Array(212, 148, 212, 133, 226, 133, 226, 148)
 position = Vector2(0, -8)
 zoom = Vector2(2.7, 2.7)
 
-[node name="Unit" parent="." instance=ExtResource("2_l2pn8")]
-script = ExtResource("3_wlt2j")
+[node name="PlayerUnit" parent="." instance=ExtResource("2_k584h")]
+position = Vector2(-113, -61)
+
+[node name="EnemyUnit" parent="." instance=ExtResource("3_0w1f5")]
+position = Vector2(100, 7)
