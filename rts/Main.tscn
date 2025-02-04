@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://c770udvrp03bf"]
+[gd_scene load_steps=10 format=4 uid="uid://c770udvrp03bf"]
 
+[ext_resource type="Script" path="res://gameManager.gd" id="1_bbdu4"]
 [ext_resource type="Texture2D" uid="uid://bl14n3c0eqkr2" path="res://Sprites/tilemap.png" id="1_gnl7w"]
 [ext_resource type="PackedScene" uid="uid://ekw6on1ftr4v" path="res://playerUnit.tscn" id="2_k584h"]
 [ext_resource type="PackedScene" uid="uid://c5uahyc54sj53" path="res://enemyUnit.tscn" id="3_0w1f5"]
@@ -289,6 +290,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(157, 21, 477, 21, 477, 
 agent_radius = 8.0
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_bbdu4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -1
@@ -359,5 +361,17 @@ zoom = Vector2(2.7, 2.7)
 [node name="PlayerUnit" parent="." instance=ExtResource("2_k584h")]
 position = Vector2(-113, -61)
 
+[node name="PlayerUnit2" parent="." instance=ExtResource("2_k584h")]
+position = Vector2(-95, -61)
+
+[node name="PlayerUnit3" parent="." instance=ExtResource("2_k584h")]
+position = Vector2(-113, -44)
+
 [node name="EnemyUnit" parent="." instance=ExtResource("3_0w1f5")]
 position = Vector2(100, 7)
+
+[node name="EnemyUnit2" parent="." instance=ExtResource("3_0w1f5")]
+position = Vector2(100, -11)
+
+[node name="EnemyUnit3" parent="." instance=ExtResource("3_0w1f5")]
+position = Vector2(100, 25)

@@ -16,9 +16,16 @@ var sprite : Sprite2D
 
 @export var is_player : bool
 
+@onready var game_manager = get_node("/root/Main")
+
 func _ready():
 	agent = $NavigationAgent2D
 	sprite = $Sprite2D
+	
+	if is_player:
+		game_manager.players.append(self)
+	else:
+		game_manager.enemies.append(self)
 
 func _process(delta):
 	target_check()
@@ -37,6 +44,10 @@ func take_damage(amount):
 	
 	if health <= 0:
 		queue_free()
+	
+	sprite.modulate = Color.RED
+	await get_tree().create_timer(0.1).timeout
+	sprite.modulate = Color.WHITE
 
 func try_attack_target():
 	var cur_time = Time.get_unix_time_from_system()

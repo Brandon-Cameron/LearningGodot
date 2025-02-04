@@ -6,6 +6,8 @@
 
 [node name="EnemyUnit" instance=ExtResource("1_46v86")]
 script = ExtResource("2_xrpbf")
+health = 70
+move_speed = 35.0
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_yuec8")
