@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://d25us01730o1u"]
+
+[ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_8qdbw"]
+[ext_resource type="Texture2D" uid="uid://ttg35d2pmifj" path="res://Assets/kenney_pixel-platformer/Tiles/Characters/tile_0001.png" id="2_38euy"]
+[ext_resource type="Script" path="res://Entities/Player/States/IdleState.gd" id="3_m571r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7qiqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_38euy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3wxie"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_8qdbw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7qiqm")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(-0.63554, -0.635343)
+shape = SubResource("CapsuleShape2D_3wxie")
+
+[node name="States" type="Node" parent="."]
+
+[node name="IdleState" type="Node" parent="States"]
+script = ExtResource("3_m571r")
